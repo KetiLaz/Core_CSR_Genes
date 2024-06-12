@@ -14,7 +14,8 @@ This Google Colab includes the script that was written to import the CSV files t
 
 ## CoreGenes_In_EdgeR_Files.ipynb
 In this Google Colab we found how many and which of the core CSR genes were present in edgeR files in order to validate the biological significance of the core genes. The edgeR files contain data (among them fold change of genes and the corresponding p-values) of RNA-seq data collection of 87 stress-related studies. <br/>
-Also the mean number of the core CSR genes present in the studies was calculated (approximately 51 genes). This number will be used for the control genes in the bootstrap analysis. 
+Next the mean number of the core CSR genes present in the studies was calculated (approximately 51 genes). This number will be used for the control genes in the bootstrap analysis. <br/>
+Also, we wrote a script that had as an output a dataframe that was exported as a CSV file with the count of the core stress response genes present in each of the 87 studies, the count of those present core genes that have a fold change with statistically significant p-values and their percentage. This CSV will be used in the bootstrap analysis to make comparisons with the control genes.
 
 ## Bootstrap_Analysis.ipynb
 In this Google Colab the script will randomly choose 51 control genes from a CSV file - from this choice all the genes extracted from Darling are excluded. Then it will find how many of the control genes are present in each study, the count of genes with statistically significant p-values and the percentage of genes with pvalues < 0.05. <br/> 
